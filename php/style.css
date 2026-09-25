@@ -1,0 +1,135 @@
+/* ====================================================
+    STYLE BIOSKOP - BLACK & GOLD THEME
+   ==================================================== */
+
+/* Pengaturan dasar halaman */
+body{
+    margin: 0;
+    padding: 30px;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background:
+    linear-gradient(
+        rgba(0,0,0,0.85),
+        rgba(0,0,0,0.95)
+    ),
+    url("cinema.jpg");
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+/* Judul sistem */
+h2{
+    text-align: center;
+    color: #FFD700;
+    letter-spacing: 3px;
+    font-size: 28px;
+    text-shadow:
+    0 0 10px #FFD700;
+}
+
+/* Sub judul */
+h3{
+    color: #FFD700;
+    text-align: center;
+    margin-top: 30px;
+}
+
+/* Container tabel */
+table{
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 30px;
+    background-color: rgba(20,20,20,0.95);
+    box-shadow:
+    0 0 20px rgba(255,215,0,0.4);
+}
+
+/* Header tabel */
+th{
+    background-color: #B8860B;
+    color: black;
+    padding: 15px;
+    border: 1px solid #FFD700;
+    font-size: 15px;
+    text-transform: uppercase;
+}
+
+/* Isi tabel */
+td{
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #8c6b00;
+    color: white;
+}
+
+/* Efek ketika mouse diarahkan */
+tr:hover{
+    background-color:
+    rgba(255,215,0,0.15);
+    transition: 0.3s;
+}
+
+/* Baris genap */
+tr:nth-child(even){
+    background-color:
+    rgba(255,255,255,0.05);
+}
+
+/* Tombol menu */
+button{
+    background:
+    linear-gradient(
+        135deg,
+        #FFD700,
+        #B8860B
+    );
+    color: black;
+    border: none;
+    padding: 12px 25px;
+    margin: 8px;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    font-size: 15px;
+    box-shadow:
+    0 0 10px rgba(255,215,0,0.5);
+}
+
+/* Hover tombol */
+button:hover{
+    background:
+    linear-gradient(135deg, #fff2a8, #FFD700);
+    transform: scale(1.05);
+}
+
+/* Form input */
+input{
+    width: 300px;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 8px;
+    border:
+    1px solid #FFD700;
+    background-color:
+    #111;
+    color:white;
+}
+
+/* Label form */
+form{
+    text-align:center;
+    background-color:
+    rgba(0,0,0,0.7);
+    padding:25px;
+    border-radius:15px;
+    box-shadow:
+    0 0 20px rgba(255,215,0,0.3);
+}
+
+/* Garis dekorasi */
+hr{
+    border:
+    1px solid #FFD700;
+    width:80%;
+}
