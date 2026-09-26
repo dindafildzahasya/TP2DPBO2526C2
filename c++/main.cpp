@@ -11,68 +11,105 @@ using namespace std;
     // ====================================================
 
 void tampilkanData(JadwalTayang daftarFilm[], int jumlahData){
+    // ====================================================
+    // MENENTUKAN PANJANG MAKSIMAL SETIAP KOLOM
+    // ====================================================
 
-    cout << "\n================ DATA BIOSKOP ================\n\n";
-    // Garis atas tabel
-    cout << "+--------+-------------------------+---------------+----------+-------------------------+---------------+----------+----------+------------+---------------+" << endl;
+    int id = 2;
+    int judul = 5;
+    int genre = 5;
+    int durasi = 6;
+    int bioskop = 7;
+    int lokasi = 6;
+    int rating = 6;
+    int studio = 6;
+    int jam = 3;
+    int harga = 5;
 
-    // Header
+    for(int i = 0; i < jumlahData; i++){
+
+        if(daftarFilm[i].getId().length() > id)
+            id = daftarFilm[i].getId().length();
+
+        if(daftarFilm[i].getJudul().length() > judul)
+            judul = daftarFilm[i].getJudul().length();
+
+        if(daftarFilm[i].getGenre().length() > genre)
+            genre = daftarFilm[i].getGenre().length();
+
+        if(to_string(daftarFilm[i].getDurasi()).length() > durasi)
+            durasi = to_string(daftarFilm[i].getDurasi()).length();
+
+        if(daftarFilm[i].getNamaBioskop().length() > bioskop)
+            bioskop = daftarFilm[i].getNamaBioskop().length();
+
+        if(daftarFilm[i].getLokasi().length() > lokasi)
+            lokasi = daftarFilm[i].getLokasi().length();
+
+        if(daftarFilm[i].getRatingUsia().length() > rating)
+            rating = daftarFilm[i].getRatingUsia().length();
+
+        if(to_string(daftarFilm[i].getNomorStudio()).length() > studio)
+            studio = to_string(daftarFilm[i].getNomorStudio()).length();
+
+        if(daftarFilm[i].getJamTayang().length() > jam)
+            jam = daftarFilm[i].getJamTayang().length();
+
+        if(to_string(daftarFilm[i].getHargaTiket()).length() > harga)
+            harga = to_string(daftarFilm[i].getHargaTiket()).length();
+    }
+
+    // ====================================================
+    // MEMBUAT GARIS TABEL
+    // ====================================================
+    string garis = "+";
+    garis += string(id+2,'-') + "+";
+    garis += string(judul+2,'-') + "+";
+    garis += string(genre+2,'-') + "+";
+    garis += string(durasi+2,'-') + "+";
+    garis += string(bioskop+2,'-') + "+";
+    garis += string(lokasi+2,'-') + "+";
+    garis += string(rating+2,'-') + "+";
+    garis += string(studio+2,'-') + "+";
+    garis += string(jam+2,'-') + "+";
+    garis += string(harga+2,'-') + "+";
+
+    cout << "\n================ DATA BIOSKOP ================\n";
+    cout << garis << endl;
+
+    // HEADER
     cout 
-    << "| "
-    << left << setw(6) << "ID"
-    << " | "
-    << setw(23) << "Judul"
-    << " | "
-    << setw(13) << "Genre"
-    << " | "
-    << setw(8) << "Durasi"
-    << " | "
-    << setw(23) << "Bioskop"
-    << " | "
-    << setw(13) << "Lokasi"
-    << " | "
-    << setw(8) << "Rating"
-    << " | "
-    << setw(8) << "Studio"
-    << " | "
-    << setw(10) << "Jam"
-    << " | "
-    << setw(13) << "Harga"
+    << "| " << left << setw(id) << "ID"
+    << " | " << setw(judul) << "Judul"
+    << " | " << setw(genre) << "Genre"
+    << " | " << setw(durasi) << "Durasi"
+    << " | " << setw(bioskop) << "Bioskop"
+    << " | " << setw(lokasi) << "Lokasi"
+    << " | " << setw(rating) << "Rating"
+    << " | " << setw(studio) << "Studio"
+    << " | " << setw(jam) << "Jam"
+    << " | " << setw(harga) << "Harga"
     << " |"
     << endl;
+    cout << garis << endl;
 
-    // Garis pemisah header
-    cout << "+--------+-------------------------+---------------+----------+-------------------------+---------------+----------+----------+------------+---------------+" << endl;
-
-    // Data
-    for(int i = 0; i < jumlahData; i++){
+    // DATA
+    for(int i=0;i<jumlahData;i++){
         cout
-        << "| "
-        << left << setw(6) << daftarFilm[i].getId()
-        << " | "
-        << setw(23) << daftarFilm[i].getJudul()
-        << " | "
-        << setw(13) << daftarFilm[i].getGenre()
-        << " | "
-        << setw(8) << daftarFilm[i].getDurasi()
-        << " | "
-        << setw(23) << daftarFilm[i].getNamaBioskop()
-        << " | "
-        << setw(13) << daftarFilm[i].getLokasi()
-        << " | "
-        << setw(8) << daftarFilm[i].getRatingUsia()
-        << " | "
-        << setw(8) << daftarFilm[i].getNomorStudio()
-        << " | "
-        << setw(10) << daftarFilm[i].getJamTayang()
-        << " | "
-        << setw(13) << daftarFilm[i].getHargaTiket()
+        << "| " << setw(id) << daftarFilm[i].getId()
+        << " | " << setw(judul) << daftarFilm[i].getJudul()
+        << " | " << setw(genre) << daftarFilm[i].getGenre()
+        << " | " << setw(durasi) << daftarFilm[i].getDurasi()
+        << " | " << setw(bioskop) << daftarFilm[i].getNamaBioskop()
+        << " | " << setw(lokasi) << daftarFilm[i].getLokasi()
+        << " | " << setw(rating) << daftarFilm[i].getRatingUsia()
+        << " | " << setw(studio) << daftarFilm[i].getNomorStudio()
+        << " | " << setw(jam) << daftarFilm[i].getJamTayang()
+        << " | " << setw(harga) << daftarFilm[i].getHargaTiket()
         << " |"
         << endl;
-
-        // Garis setiap baris
-        cout << "+--------+-------------------------+---------------+----------+-------------------------+---------------+----------+----------+------------+---------------+" << endl;
     }
+    cout << garis << endl;
 }
 
 int main(){
