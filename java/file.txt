@@ -1,0 +1,10 @@
+ID Film       : F006
+Judul Film    : Dilan 1990
+Genre         : Romance
+Durasi        : 200
+Bioskop       : Delipark XXI
+Lokasi        : Medan
+Rating        : 17+
+Studio        : 6
+Jam Tayang    : 14:00
+Harga Tiket   : 55000
