@@ -2,6 +2,8 @@
 
 // Membuat class Film
 class Film{
+    // Atribut private untuk poster film
+    private $poster_film;
     // Atribut private untuk ID film
     private $id;
     // Atribut private untuk judul film
@@ -12,7 +14,9 @@ class Film{
     private $durasi;
 
     // Constructor Film
-    public function __construct($id, $judul, $genre, $durasi){
+    public function __construct($poster_film, $id, $judul, $genre, $durasi){
+        // Menyimpan poster film
+        $this->poster_film = $poster_film;
         // Menyimpan ID film
         $this->id = $id;
         // Menyimpan judul film
@@ -21,6 +25,14 @@ class Film{
         $this->genre = $genre;
         // Menyimpan durasi film
         $this->durasi = $durasi;
+    }
+
+    // Getter dan Setter poster film
+    public function getPosterFilm(){
+        return $this->poster_film;
+    }
+    public function setPosterFilm($poster_film){
+        $this->poster_film = $poster_film;
     }
 
     // Getter ID film
