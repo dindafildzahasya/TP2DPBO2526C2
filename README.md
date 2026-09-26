@@ -449,42 +449,54 @@ Untuk PHP, field poster menggunakan nama file gambar yang tersedia di folder `im
   <img width="602" height="453" alt="Tambah_data" src="https://github.com/user-attachments/assets/8fdb7728-b1c1-49df-9745-20ae68196c83" />
 
 - Tabel setelah data ditambahkan.
+
   <img width="1430" height="620" alt="Hasil" src="https://github.com/user-attachments/assets/9a2551f1-0a4c-4589-a132-68279b9e5872" />
 
 - Tampilan awal tabel.
+
   <img width="1462" height="458" alt="Tampilan Awal" src="https://github.com/user-attachments/assets/3cf05603-7236-4ae7-ab11-39d68c558841" />
 
 #### Java
 - Proses tambah data.
+
   <img width="603" height="463" alt="Tambah_data" src="https://github.com/user-attachments/assets/dc1ae533-9b58-4f2c-aac2-018ad1f1e9ec" />
   
 - Tabel setelah data ditambahkan.
+
   <img width="1367" height="447" alt="Hasil" src="https://github.com/user-attachments/assets/549f2144-651b-43a4-a53b-1dab271501b3" />
   
 - Tampilan awal tabel.
+
   <img width="1367" height="512" alt="Tampilan Awal" src="https://github.com/user-attachments/assets/5824b1a8-1322-4c52-a77d-576646282dc2" />
 
 #### C++
 - Proses tambah data.
+
   <img width="696" height="530" alt="Tambah_data" src="https://github.com/user-attachments/assets/3fb735b6-3cee-4378-8ece-ecbdbbb6a9f6" />
 
 - Tabel setelah data ditambahkan.
+
   <img width="1496" height="460" alt="Hasil" src="https://github.com/user-attachments/assets/60677c8e-abed-40c7-98e6-f3c86bc90e0b" />
 
 - Tampilan awal tabel.
+
   <img width="1491" height="518" alt="Tampilan awal" src="https://github.com/user-attachments/assets/dd38ae30-af4d-4ff6-9492-ef2478f07e2b" />
 
 #### PHP
 - Tampilan website.
+
   <img width="1917" height="441" alt="Tampilan menu" src="https://github.com/user-attachments/assets/871dfd00-0a4f-4b75-be1a-d29aee9fff87" />
 
 - Form tambah data.
+
   <img width="1920" height="1080" alt="Tambah Data" src="https://github.com/user-attachments/assets/f5f5f57d-7bc2-4613-9f52-a4b8202a88f3" />
 
 - Tampilan awal tabel.
+
   <img width="1920" height="1080" alt="Tampilkan Film" src="https://github.com/user-attachments/assets/cd6eec57-db8a-4164-8e2c-e6e48f1cd296" />
 
 - Tabel setelah penambahan film baru.
+
   <img width="1920" height="1080" alt="Hasil" src="https://github.com/user-attachments/assets/4f62035e-6488-432c-8958-f79b38cc709b" />
 
 ---
