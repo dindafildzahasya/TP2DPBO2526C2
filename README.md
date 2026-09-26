@@ -445,6 +445,7 @@ Untuk PHP, field poster menggunakan nama file gambar yang tersedia di folder `im
 
 #### Python
 - Proses tambah data.
+
   <img width="602" height="453" alt="Tambah_data" src="https://github.com/user-attachments/assets/8fdb7728-b1c1-49df-9745-20ae68196c83" />
 
 - Tabel setelah data ditambahkan.
