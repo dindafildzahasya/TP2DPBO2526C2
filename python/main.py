@@ -5,52 +5,68 @@ from JadwalTayang import JadwalTayang
 # ====================================================
 # FUNCTION MENAMPILKAN DATA DALAM BENTUK TABEL
 # ====================================================
-def tampilkan_data(daftarFilm, jumlahData):
-    # Judul tabel
+def tampilkan_data(daftar_film, jumlah_data):
+
+    header = [
+        "ID",
+        "Judul",
+        "Genre",
+        "Durasi",
+        "Bioskop",
+        "Lokasi",
+        "Rating",
+        "Studio",
+        "Jam",
+        "Harga"
+    ]
+
+    data = []
+
+    for film in daftar_film:
+        data.append([
+            film.getId(),
+            film.getJudul(),
+            film.getGenre(),
+            str(film.getDurasi()),
+            film.getNamaBioskop(),
+            film.getLokasi(),
+            film.getRatingUsia(),
+            str(film.getNomorStudio()),
+            film.getJamTayang(),
+            str(film.getHargaTiket())
+        ])
+
+    # mencari lebar kolom
+    lebar = []
+    for i in range(len(header)):
+        panjang = len(header[i])
+
+        for baris in data:
+            if len(baris[i]) > panjang:
+                panjang = len(baris[i])
+        lebar.append(panjang)
+
+    # membuat garis
+    garis = "+"
+    for x in lebar:
+        garis += "-"*(x+2)+"+"
+
     print("\n================ DATA BIOSKOP ================\n")
-    # Membuat garis tabel bagian atas
-    garis = ("+--------+-------------------------+---------------+----------+-------------------------+---------------+----------+----------+------------+---------------+")
     print(garis)
 
-    # Header tabel
-    print(
-        "| {:<6} | {:<23} | {:<13} | {:<8} | {:<23} | {:<13} | {:<8} | {:<8} | {:<10} | {:<13} |"
-        .format(
-            "ID",
-            "Judul",
-            "Genre",
-            "Durasi",
-            "Bioskop",
-            "Lokasi",
-            "Rating",
-            "Studio",
-            "Jam",
-            "Harga"
-        )
-    )
-    # Garis pemisah header
+    print("|", end="")
+    for i in range(len(header)):
+        print(f" {header[i]:<{lebar[i]}} |", end="")
+    print()
     print(garis)
 
-    # Menampilkan seluruh data film
-    for i in range(jumlahData):
-        film = daftarFilm[i]
-        print(
-            "| {:<6} | {:<23} | {:<13} | {:<8} | {:<23} | {:<13} | {:<8} | {:<8} | {:<10} | {:<13} |"
-            .format(
-                film.getId(),
-                film.getJudul(),
-                film.getGenre(),
-                film.getDurasi(),
-                film.getNamaBioskop(),
-                film.getLokasi(),
-                film.getRatingUsia(),
-                film.getNomorStudio(),
-                film.getJamTayang(),
-                film.getHargaTiket()
-            )
-        )
-        # Garis setiap baris
-        print(garis)
+    for baris in data:
+        print("|", end="")
+
+        for i in range(len(baris)):
+            print(f" {baris[i]:<{lebar[i]}} |", end="")
+        print()
+    print(garis)
 
 # Membuat list kosong untuk menyimpan semua objek film
 daftar_film = []
