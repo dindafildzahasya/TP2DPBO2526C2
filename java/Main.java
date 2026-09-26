@@ -5,49 +5,86 @@ public class Main {
     // FUNCTION MENAMPILKAN DATA DALAM TABEL
     // ====================================================
     public static void tampilkanData(JadwalTayang[] daftarFilm, int jumlahData){
-        System.out.println("\n================ DATA BIOSKOP ================\n");
 
-        // Garis tabel
-        System.out.println("+--------+-------------------------+---------------+----------+-------------------------+---------------+----------+----------+------------+---------------+");
+    // ====================================================
+    // MENYIMPAN HEADER TABEL
+    // ====================================================
+    String[] header = {"ID","Judul", "Genre", "Durasi", "Bioskop", "Lokasi", "Rating", "Studio", "Jam", "Harga"
+    };
 
-        // Header tabel
-        System.out.printf(
-            "| %-6s | %-23s | %-13s | %-8s | %-23s | %-13s | %-8s | %-8s | %-10s | %-13s |\n",
-            "ID",
-            "Judul",
-            "Genre",
-            "Durasi",
-            "Bioskop",
-            "Lokasi",
-            "Rating",
-            "Studio",
-            "Jam",
-            "Harga"
-        );
+    // ====================================================
+    // MENGAMBIL DATA KE DALAM ARRAY STRING
+    // ====================================================
+    String[][] data = new String[jumlahData][10];
+    for(int i = 0; i < jumlahData; i++){
+        data[i][0] = daftarFilm[i].getId();
+        data[i][1] = daftarFilm[i].getJudul();
+        data[i][2] = daftarFilm[i].getGenre();
+        data[i][3] = String.valueOf(daftarFilm[i].getDurasi());
+        data[i][4] = daftarFilm[i].getNamaBioskop();
+        data[i][5] = daftarFilm[i].getLokasi();
+        data[i][6] = daftarFilm[i].getRatingUsia();
+        data[i][7] = String.valueOf(daftarFilm[i].getNomorStudio());
+        data[i][8] = daftarFilm[i].getJamTayang();
+        data[i][9] = String.valueOf(daftarFilm[i].getHargaTiket());
+    }
 
-        // Garis pemisah header
-        System.out.println("+--------+-------------------------+---------------+----------+-------------------------+---------------+----------+----------+------------+---------------+");
+    // ====================================================
+    // MENCARI PANJANG MAKSIMAL SETIAP KOLOM
+    // ====================================================
+    int[] panjangKolom = new int[10];
+    // Panjang minimal berdasarkan header
+    for(int i = 0; i < header.length; i++){
+        panjangKolom[i] = header[i].length();
+    }
 
-        // Menampilkan data
-        for(int i = 0; i < jumlahData; i++){
-            System.out.printf(
-                "| %-6s | %-23s | %-13s | %-8d | %-23s | %-13s | %-8s | %-8d | %-10s | %-13d |\n",
-                daftarFilm[i].getId(),
-                daftarFilm[i].getJudul(),
-                daftarFilm[i].getGenre(),
-                daftarFilm[i].getDurasi(),
-                daftarFilm[i].getNamaBioskop(),
-                daftarFilm[i].getLokasi(),
-                daftarFilm[i].getRatingUsia(),
-                daftarFilm[i].getNomorStudio(),
-                daftarFilm[i].getJamTayang(),
-                daftarFilm[i].getHargaTiket()
-            );
-
-            // Garis setiap baris
-            System.out.println("+--------+-------------------------+---------------+----------+-------------------------+---------------+----------+----------+------------+---------------+");
+    // Membandingkan dengan isi data
+    for(int i = 0; i < jumlahData; i++){
+        for(int j = 0; j < 10; j++){
+            if(data[i][j].length() > panjangKolom[j]){
+                panjangKolom[j] = data[i][j].length();
+            }
         }
     }
+
+    // ====================================================
+    // MEMBUAT GARIS TABEL DINAMIS
+    // ====================================================
+    String garis = "+";
+    for(int i = 0; i < 10; i++){
+        garis += "-".repeat(panjangKolom[i] + 2);
+        garis += "+";
+    }
+
+    System.out.println("\n================ DATA BIOSKOP ================\n");
+    System.out.println(garis);
+
+    // ====================================================
+    // HEADER TABEL
+    // ====================================================
+    System.out.print("|");
+    for(int i = 0; i < 10; i++){
+        System.out.printf(" %-" + panjangKolom[i] + "s |", header[i]);
+    }
+
+    System.out.println();
+    System.out.println(garis);
+
+    // ====================================================
+    // DATA TABEL
+    // ====================================================
+    for(int i = 0; i < jumlahData; i++){
+        System.out.print("|");
+        for(int j = 0; j < 10; j++){
+            System.out.printf(" %-" + panjangKolom[j] + "s |", data[i][j]);
+        }
+        System.out.println();
+    }
+
+    // Garis bawah tabel
+    System.out.println(garis);
+}
+
     // ====================================================
     // MAIN PROGRAM
     // ====================================================
