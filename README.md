@@ -28,17 +28,13 @@ JadwalTayang
 
 # 2. Janji
 
-Saya menyatakan bahwa program ini dibuat untuk memenuhi tugas praktikum OOP dan mengimplementasikan konsep **Multilevel Inheritance** pada tema Sistem Bioskop.
-
-Program dikembangkan dengan struktur class yang konsisten pada Python, Java, C++, dan PHP. Setiap bahasa memiliki implementasi program utama, minimal lima objek awal, serta fitur penambahan data sesuai ketentuan tugas.
-
-**Catatan:** Pernyataan ini merupakan format deklarasi untuk tugas dan dapat disesuaikan dengan ketentuan akademik yang berlaku.
+Saya Adinda Fildzah Hasya dengan NIM 2501218 mengerjakan Tugas Praktikum 2 dalam mata kuliah Desain dan Pemrograman Berorientasi Objek untuk keberkahanNya maka saya tidak melakukan kecurangan seperti yang telah dispesifikasikan. Aamiin.
 
 ---
 
 # 3. Deskripsi Program
 
-Program **Sistem Bioskop Premium** digunakan untuk menyimpan dan menampilkan informasi film yang sedang tayang di bioskop.
+Program **Sistem Bioskop** digunakan untuk menyimpan dan menampilkan informasi film yang sedang tayang di bioskop.
 
 Program memiliki tiga class utama:
 
@@ -141,13 +137,13 @@ Mewarisi class `FilmTayang` dan menambahkan informasi jadwal pemutaran film.
 
 | Atribut | Tipe Data | Keterangan |
 |---|---|---|
+| `poster_film` | String (khusus PHP) | Nama file poster film |
 | `id` | String | ID unik film, contoh `F001` |
 | `judul` | String | Judul film |
 | `genre` | String | Genre film |
 | `durasi` | Integer | Durasi film dalam menit |
-| `foto_produk` | String (khusus PHP) | Nama file poster film |
 
-> `foto_produk` hanya digunakan pada implementasi PHP sesuai instruksi tugas. Dalam tema bioskop, atribut tersebut direpresentasikan sebagai **poster film**.
+> `poster_film` hanya digunakan pada implementasi PHP sesuai instruksi tugas yang diharuskan menambahkan foto produk. 
 
 ## 5.2 Class FilmTayang
 
@@ -361,21 +357,7 @@ Program berhenti setelah user memilih menu keluar.
 
 ---
 
-# 9. Lima Data Awal
-
-| ID | Judul | Genre | Durasi | Bioskop | Lokasi | Rating | Studio | Jam | Harga |
-|---|---|---|---:|---|---|---|---:|---|---:|
-| F001 | Avatar 3 | Sci-Fi | 180 | CGV PVJ | Bandung | 13+ | 1 | 19:00 | Rp50000 |
-| F002 | Avengers Secret Wars | Action | 160 | XXI Trans Studio | Bandung | 13+ | 2 | 20:00 | Rp75000 |
-| F003 | Oppenheimer | Drama | 180 | XXI Plaza Indonesia | Jakarta | 17+ | 3 | 18:30 | Rp60000 |
-| F004 | Inside Out 2 | Animation | 100 | Cinepolis | Jakarta | SU | 4 | 15:00 | Rp45000 |
-| F005 | Godzilla X Kong | Action | 120 | CGV Grand Indonesia | Jakarta | 13+ | 5 | 21:00 | Rp80000 |
-
----
-
-# 10. Struktur Directory
-
-Struktur yang disarankan:
+# 9. Struktur Directory
 
 ```text
 TP2/
@@ -385,21 +367,21 @@ TP2/
 │   ├── FilmTayang.cpp
 │   ├── JadwalTayang.cpp
 │   ├── main.cpp
-│   └── testcase.txt
+│   └── file.txt
 │
 ├── JAVA/
 │   ├── Film.java
 │   ├── FilmTayang.java
 │   ├── JadwalTayang.java
 │   ├── Main.java
-│   └── testcase.txt
+│   └── file.txt
 │
 ├── PYTHON/
 │   ├── Film.py
 │   ├── FilmTayang.py
 │   ├── JadwalTayang.py
 │   ├── main.py
-│   └── testcase.txt
+│   └── file.txt
 │
 ├── PHP/
 │   ├── Film.php
@@ -407,27 +389,26 @@ TP2/
 │   ├── JadwalTayang.php
 │   ├── main.php
 │   ├── style.css
-│   ├── testcase.txt
+│   ├── file.txt
 │   └── images/
 │       ├── Avatar.jpg
 │       ├── Avengers.jpg
+│       ├── Dilan.jpg
 │       ├── Oppenheimer.jpg
 │       ├── Inside.jpg
 │       └── Godzilla.jpg
 │
-├── design diagram/
-│   └── diagram.png
+├── Diagram Desaign.jpg
 │
 └── README.md
 ```
 
-> File object hasil kompilasi seperti `.o` pada C++ dan `.class` pada Java tidak perlu dimasukkan.
 
 ---
 
-# 11. Test Case
+# 10. Test Case
 
-Setiap bahasa memiliki `testcase.txt` pada directory masing-masing.
+Setiap bahasa memiliki `file.txt` pada directory masing-masing yang berisi testcase setiap bahasa.
 
 Contoh alur testcase:
 
@@ -445,9 +426,6 @@ Jakarta
 14:00
 55000
 
-2
-
-3
 ```
 
 Makna testcase:
@@ -463,7 +441,7 @@ Untuk PHP, field poster menggunakan nama file gambar yang tersedia di folder `im
 
 ---
 
-# 12. Dokumentasi Program
+# 11. Dokumentasi Program
 
 Tambahkan screenshot hasil program pada folder dokumentasi agar README dapat menunjukkan proses penggunaan.
 
@@ -520,7 +498,7 @@ docs/
 
 ---
 
-# 13. Dokumentasi Tampilan PHP
+# 12. Dokumentasi Tampilan PHP
 
 PHP menggunakan tema:
 
@@ -563,28 +541,3 @@ akan ditampilkan sebagai poster pada tabel.
 
 ---
 
-# 14. Kesimpulan
-
-Program **Sistem Bioskop Premium** menerapkan konsep OOP dengan tiga level class:
-
-```text
-Film
-  ↓
-FilmTayang
-  ↓
-JadwalTayang
-```
-
-Program telah dirancang untuk memenuhi ketentuan tugas:
-- Memiliki 3 class.
-- Menggunakan Multilevel Inheritance.
-- Setiap class memiliki minimal 3 atribut.
-- Memiliki minimal 5 object awal pada main.
-- Dapat menerima input user untuk menambahkan data pada C++, Java, dan Python.
-- PHP menyediakan implementasi interaktif berbasis website.
-- Seluruh atribut ditampilkan dalam satu tabel.
-- Tabel dibuat dinamis mengikuti panjang data.
-- PHP memiliki atribut khusus `foto_produk` yang direpresentasikan sebagai poster film.
-- Tersedia file testcase untuk masing-masing bahasa.
-- Tersedia design diagram hubungan antar class.
-- Dokumentasi program dapat dilengkapi dengan screenshot penggunaan setiap bahasa.
