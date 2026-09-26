@@ -9,8 +9,10 @@ session_start();
 function tampilkanData($daftarFilm, $jumlahData){
     echo "<h2>================ DATA BIOSKOP ================</h2>";
     echo "
+    <div class = 'table-container'>
     <table>
     <tr>
+        <th>Poster</th>
         <th>ID</th>
         <th>Judul</th>
         <th>Genre</th>
@@ -28,6 +30,7 @@ function tampilkanData($daftarFilm, $jumlahData){
         $film = $daftarFilm[$i];
         echo "
         <tr>
+            <td><img src='images/".$film->getPosterFilm()."' width='80'></td>
             <td>".$film->getId()."</td>
             <td>".$film->getJudul()."</td>
             <td>".$film->getGenre()."</td>
@@ -40,7 +43,10 @@ function tampilkanData($daftarFilm, $jumlahData){
             <td>Rp ".$film->getHargaTiket()."</td>
         </tr>";
     }
-    echo "</table>
+    echo "
+    </table>
+    </div>
+
     <br> 
     <form method = 'post'>
         <button name = 'menu' value = '0'>
@@ -54,6 +60,7 @@ if(!isset($_SESSION['daftarFilm'])){
 
     // Objek film pertama
     $_SESSION['daftarFilm'][] = new JadwalTayang(
+        "Avatar.jpg",
         "F001",
         "Avatar 3",
         "Sci-Fi",
@@ -68,6 +75,7 @@ if(!isset($_SESSION['daftarFilm'])){
 
     // Objek film kedua
     $_SESSION['daftarFilm'][] = new JadwalTayang(
+        "Avengers.jpg",
         "F002",
         "Avengers Secret Wars",
         "Action",
@@ -82,6 +90,7 @@ if(!isset($_SESSION['daftarFilm'])){
 
     // Objek film ketiga
     $_SESSION['daftarFilm'][] = new JadwalTayang(
+        "Oppenheimer.jpg",
         "F003",
         "Oppenheimer",
         "Drama",
@@ -96,6 +105,7 @@ if(!isset($_SESSION['daftarFilm'])){
 
     // Objek film keempat
     $_SESSION['daftarFilm'][] = new JadwalTayang(
+        "Inside.jpg",
         "F004",
         "Inside Out 2",
         "Animation",
@@ -110,6 +120,7 @@ if(!isset($_SESSION['daftarFilm'])){
 
     // Objek film kelima
     $_SESSION['daftarFilm'][] = new JadwalTayang(
+        "Godzilla.jpg",
         "F005",
         "Godzilla X Kong",
         "Action",
@@ -132,6 +143,7 @@ $jumlahData = count($daftarFilm);
 // ====================================================
 if(isset($_POST['simpan'])){
     $filmBaru = new JadwalTayang(
+        $_POST['poster_film'],
         $_POST['id'],
         $_POST['judul'],
         $_POST['genre'],
@@ -202,6 +214,7 @@ if(isset($_POST['menu'])){
         <h3>========== TAMBAH DATA FILM ==========</h3>
         <form method='post'>
         
+        Poster Film : <input type = 'text' name = 'poster_film' placeholder='contoh: Dilan.jpg'><br>
         ID Film : <input type='text' name='id'><br>
         Judul : <input type='text' name='judul'><br>
         Genre : <input type='text' name='genre'><br>
