@@ -10,9 +10,9 @@ class JadwalTayang extends FilmTayang{
     private $hargaTiket;
 
     // Constructor JadwalTayang
-    public function __construct($id, $judul, $genre, $durasi, $namaBioskop, $lokasi, $ratingUsia, $nomorStudio, $jamTayang, $hargaTiket){
+    public function __construct($poster_film, $id, $judul, $genre, $durasi, $namaBioskop, $lokasi, $ratingUsia, $nomorStudio, $jamTayang, $hargaTiket){
         // Memanggil constructor FilmTayang
-        parent::__construct($id, $judul, $genre, $durasi, $namaBioskop, $lokasi, $ratingUsia);
+        parent::__construct($poster_film, $id, $judul, $genre, $durasi, $namaBioskop, $lokasi, $ratingUsia);
         // Mengisi atribut tambahan
         $this->nomorStudio = $nomorStudio;
         $this->jamTayang = $jamTayang;
