@@ -11,9 +11,9 @@ class FilmTayang extends Film{
     private $ratingUsia;
 
     // Constructor FilmTayang
-    public function __construct($id, $judul, $genre, $durasi, $namaBioskop, $lokasi, $ratingUsia){
+    public function __construct($poster_film, $id, $judul, $genre, $durasi, $namaBioskop, $lokasi, $ratingUsia){
         // Memanggil constructor parent Film
-        parent::__construct($id, $judul, $genre, $durasi);
+        parent::__construct($poster_film, $id, $judul, $genre, $durasi);
 
         // Mengisi atribut tambahan
         $this->namaBioskop = $namaBioskop;
