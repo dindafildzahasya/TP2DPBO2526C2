@@ -133,3 +133,35 @@ hr{
     1px solid #FFD700;
     width:80%;
 }
+
+/* Container tabel agar berada di tengah */
+.table-container{
+    display : flex;
+    justify-content : center;
+    width:95%;
+    margin:auto;
+    overflow-x:auto;
+}
+
+/* Tabel */
+table{
+    width:max-content;
+    min-width:90%;
+    margin:30px auto;
+    border-collapse:collapse;
+    table-layout:auto;
+    background-color:rgba(20,20,20,0.95);
+    box-shadow:
+    0 0 20px rgba(255,215,0,0.4);
+}
+
+td, th{
+    white-space:nowrap;
+}
+
+table img{
+    width:80px;
+    height:120px;
+    object-fit:cover;
+    border-radius:8px;
+}
