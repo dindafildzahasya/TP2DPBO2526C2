@@ -1,3 +1,4 @@
+Poster Film      : Dilan.jpg
 ID Film          : F006
 Judul Film       : Dilan 1990
 Genre            : Romance
